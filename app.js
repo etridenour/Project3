@@ -1,9 +1,16 @@
 var express = require('express');
 var app = express();
+db = require('./models');
+
+var drumTable = db.drum.findAll()
+    .then((results) => {
+        return results;
+    })
+
 
 app.get('/test', function(req, res) {
 
-    res.json({data: 'the shiznit'})
+    res.json({data: drumTable})
 
 })
 
