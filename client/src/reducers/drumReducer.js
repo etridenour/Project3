@@ -1,21 +1,28 @@
+const initial_state = {
+    playList: [],
+    videoList: []
+}
+
+export function drumReducer (state = initial_state, action) {
 
 
-export function drumReducer (state, action) {
-    if(state === undefined){
-        return{
-            playList: [],
-            videoList: []
-        }
-    }
+    // if(state === undefined){
+    //     return{
+    //         playList: [],
+    //         videoList: []
+    //     }
+    // } 
 
     switch(action.type) {
         case 'ADD_PLAYLIST':
-            return{
+            
+            
+            return {
                 ...state,
                 playList: state.playList.concat({
-                    playListItemName: action.playListItem.rudiment,
-                    playListItemId: action.playListItem.id,
-                    
+                    rudiment: action.playListItem.rudiment,
+                    id: action.playListItem.id,
+                    uuid: action.playListItem.uuid
                 }),
                 videoList: state.videoList
             }
@@ -33,7 +40,14 @@ export function drumReducer (state, action) {
 
         case 'DB_FETCH':
             return{
-                videoList
-            }
+                ...state,
+
+                videoList: action.dbList.data.fulfillmentValue
+                }
+
+        default:
+            return state;
     }
 }
+
+export default drumReducer

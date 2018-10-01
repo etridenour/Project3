@@ -1,30 +1,22 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('drums', {
+    return queryInterface.createTable('exercises', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      rudiment: {
+      exercise: {
         type: Sequelize.STRING
-      },
-      beginner: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-      },
-      medium: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-      },
-      advanced: {
-        type: Sequelize.INTEGER,
-        allowNull: true
       },
       hyperlink: {
         type: Sequelize.STRING
+      },
+      reference: {
+        type: Sequelize.STRING,
+        allowNull: true
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +29,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('drums');
+    return queryInterface.dropTable('exercises');
   }
 };

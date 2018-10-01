@@ -2,20 +2,20 @@
 
 export const addToPlaylist = item => ({
     type: 'ADD_PLAYLIST',
-    playListItem: item,
+    playListItem: item
 })
 
 export const deleteFromPlaylist = item => ({
     type: 'DELETE_PLAYLIST',
-    playListItem: item,
+    playListItem: item
 })
 
-export const dbFetch = data => ({
+export const dbFetch = response => ({
     type: 'DB_FETCH',
-    dbList: item,
+    dbList: response
 })
 
 export const dbUpdate = data => ({
     type: 'DB_UPDATE',
-    playListItem: item,
+    playListItem: data
 })

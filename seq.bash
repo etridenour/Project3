@@ -1,5 +1,9 @@
+
 # sequelize model:generate --name drum \
-#   --attributes rudiment:string,beginner:integer,medium:integer,advanced:integer,hyperlink:string
+#   --attributes rudiment:string,hyperlink:string,reference:string
 
 #   sequelize model:generate --name user \
 #   --attributes firstName:string,lastName:integer,email:string,videoId:integer
+
+#   sequelize model:generate --name exercises \
+#   --attributes exercise:string,hyperlink:string,reference:string

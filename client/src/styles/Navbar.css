@@ -2,5 +2,15 @@
     margin-bottom: .5%;
 }
 .MuiAppBar-colorPrimary-8{
-    background-color: black !important;
+    background-color: blue !important;
+}
+.nav{
+    text-align: center;
+}
+.MuiToolbar-root-37{
+    justify-content: center;
+}
+.appBar{
+    display: flex;
+    
 }

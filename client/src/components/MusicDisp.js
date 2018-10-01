@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import '../styles/Video.css';
+import '../styles/MusicDisp.css';
 
-class Video extends React.Component {
+class MusicDisp extends React.Component {
     constructor(props) {
         super(props);
         
@@ -12,8 +12,8 @@ class Video extends React.Component {
     render() {
         return (
             
-                <Grid item xs={9} className='mainContent'>
-                        Also balls deep
+                <Grid item xs={10} className='musicDisp'>
+                        Music
 
                 </Grid>
          
@@ -22,8 +22,5 @@ class Video extends React.Component {
 }
 
 
-Video.propTypes = {
-    
-};
 
-export default Video
+export default MusicDisp

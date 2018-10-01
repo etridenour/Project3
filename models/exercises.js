@@ -1,12 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const drum = sequelize.define('drum', {
-    rudiment: DataTypes.STRING,
+  const exercises = sequelize.define('exercises', {
+    exercise: DataTypes.STRING,
     hyperlink: DataTypes.STRING,
     reference: DataTypes.STRING
   }, {});
-  drum.associate = function(models) {
+  exercises.associate = function(models) {
     // associations can be defined here
   };
-  return drum;
+  return exercises;
 };
