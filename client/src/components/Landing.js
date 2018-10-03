@@ -11,7 +11,7 @@ class Landing extends React.Component {
         return (
             <Grid item xs={10} className='mainContent'>
                         
-            
+            <h1>Chop Shredder</h1>
 
             </Grid>
         );

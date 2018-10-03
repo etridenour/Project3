@@ -15,7 +15,12 @@ export const dbFetch = response => ({
     dbList: response
 })
 
-export const dbUpdate = data => ({
-    type: 'DB_UPDATE',
-    playListItem: data
+export const videoSend = video => ({
+    type: 'VIDEO_SEND',
+    video: video
+})
+
+export const clearPlaylist = items => ({
+    type: 'CLEAR_PLAYLIST',
+    items: items
 })

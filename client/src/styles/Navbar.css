@@ -2,7 +2,7 @@
     margin-bottom: .5%;
 }
 .MuiAppBar-colorPrimary-8{
-    background-color: blue !important;
+    background: linear-gradient(-90deg, #2196F3 40%, #21CBF3 50%) !important;
 }
 .nav{
     text-align: center;
@@ -13,4 +13,13 @@
 .appBar{
     display: flex;
     
+}
+.shred{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.noUnderline{
+    text-decoration: none;
+    color: black;
 }

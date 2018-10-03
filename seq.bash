@@ -7,3 +7,6 @@
 
 #   sequelize model:generate --name exercises \
 #   --attributes exercise:string,hyperlink:string,reference:string
+
+#   sequelize model:generate --name playlist \
+#   --attributes rudiment:string,uuid:string,hyperlink:string

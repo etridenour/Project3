@@ -1,0 +1,9 @@
+.PVideoPlay{
+    border: solid blue;
+    background-color: rgb(240, 240, 240);
+    color: white;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    border: none;
+}

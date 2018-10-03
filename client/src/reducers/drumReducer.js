@@ -1,17 +1,12 @@
+import uuid from 'uuid';
+
 const initial_state = {
     playList: [],
-    videoList: []
+    videoList: [],
+    videoToPlay: {}
 }
 
 export function drumReducer (state = initial_state, action) {
-
-
-    // if(state === undefined){
-    //     return{
-    //         playList: [],
-    //         videoList: []
-    //     }
-    // } 
 
     switch(action.type) {
         case 'ADD_PLAYLIST':
@@ -21,15 +16,15 @@ export function drumReducer (state = initial_state, action) {
                 ...state,
                 playList: state.playList.concat({
                     rudiment: action.playListItem.rudiment,
-                    id: action.playListItem.id,
-                    uuid: action.playListItem.uuid
+                    uuid: uuid.v4(),
+                    hyperlink: action.playListItem.hyperlink
                 }),
                 videoList: state.videoList
             }
         
         case 'DELETE_PLAYLIST':
             const updatedList = state.playList.filter(item => {
-                return item.id !== action.playListItem.id
+                return item.uuid !== action.playListItem.uuid
             })
             return{
                 ...state,
@@ -41,8 +36,24 @@ export function drumReducer (state = initial_state, action) {
         case 'DB_FETCH':
             return{
                 ...state,
+                videoList: action.dbList.data.fulfillmentValue,
+                playList: action.dbList.playList.fulfillmentValue
+                }
 
-                videoList: action.dbList.data.fulfillmentValue
+        case 'VIDEO_SEND':
+                return{
+                    ...state,
+                    videoToPlay: {
+                        rudiment: action.video.rudiment,
+                        hyperlink: action.video.hyperlink
+
+                    }
+                }
+
+        case 'CLEAR_PLAYLIST':
+                return{
+                    ...state,
+                    playList: []
                 }
 
         default:

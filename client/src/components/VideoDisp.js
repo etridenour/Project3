@@ -1,5 +1,4 @@
 import React from 'react';
-import AddVideo from './AddVideo';
 import Grid from '@material-ui/core/Grid';
 import uuid from 'uuid';
 import {addToPlaylist, dbFetch} from '../actions';
@@ -16,28 +15,28 @@ class VideoDisp extends React.Component {
 
     render() {
 
-        console.log("balls deep");
         
         return (
 
-            <div>balls deep</div>    
+            <Grid item xs={10} className='mainBox'>
+            <Grid item xs={6} className='rudimentContent'>
+                        
+            {
+            this.props.videoList.map(item => {
+                return <div key={uuid.v4()} className='rudimentBox zoom' onClick={() => this.props.onAddToPlaylist(item)}>
+                            <div className='rudimentName'>{item.rudiment}</div>
+                        </div>
+                })
+            }
+
+            </Grid>
+            </Grid> 
          
         );
     }
 }
 
-// <Grid item xs={10} className='mainContent'>
-                        
-                //         {
-                //         this.props.videoList.map(item => {
-                //             return <div key={uuid.v4()} className='rudimentList'>
-                //                         <strong className='rudiment' href='#' onClick={() => this.props.onAddToPlaylist(item)}>{item.rudiment}</strong>
-                //                     </div>
-                //         })
-                //     }
 
-                    
-                // </Grid>
 
 
 

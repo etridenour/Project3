@@ -19,13 +19,12 @@ class Navbar extends React.Component {
             <div className='root'>
                 <AppBar position="static" className='appBar'>
                     <Toolbar className='nav'>
-                    <Button><Link to="/AddVideo">Add To Playlist</Link></Button>
-                    <Button>Exercises</Button>
-                    <Typography variant="title" color="inherit">
-                        Shred
-                        
+                    <Button><Link className='noUnderline' to="/AddVideo">Add To Playlist</Link></Button>
+                    
+                    <Typography variant="title" color="inherit"><Link className='shred' to="/">Shred</Link>
+                    
                     </Typography>
-                    <Button>Video Player</Button>
+                    <Button>Exercises</Button>
                     </Toolbar>
                 </AppBar>
             </div>
