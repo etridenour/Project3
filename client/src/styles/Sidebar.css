@@ -24,11 +24,12 @@
     color: white;
 }
 .playButton{
-    background: rgb(46, 216, 46) !important;
     margin-right: 5% !important;
+    width: 23px;;
 }
 .deleteButton{
     height: 1px;
+    cursor: pointer;
 }
 
 .avatar {
@@ -48,10 +49,16 @@
     margin-left: 10px;
 }
 .playListTitleButton{
-    margin-top: 20px !important;
-    margin-left: 10px !important;
-    height: 10px;
+    margin-left: 16px !important;
+    cursor: pointer;
 }
 .playListContainer{
     text-align: center;
+}
+.zoom {
+    transition: transform .2s; /* Animation */
+}
+.zoom:hover {
+    transform: scale(2); 
+    
 }

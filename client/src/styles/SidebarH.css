@@ -6,7 +6,7 @@
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.playlistItem{
+.playlistItemH{
     font-size: 17px;
     margin-top: 3%;
     margin-left: 10px;
@@ -19,39 +19,46 @@
     margin-bottom: 10px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.playLink{
+.playLinkH{
     text-decoration: none;
     color: white;
 }
-.playButton{
-    background: rgb(46, 216, 46) !important;
+.playButtonH{
     margin-right: 5% !important;
+    width: 23px;;
 }
-.deleteButton{
+.deleteButtonH{
     height: 1px;
+    cursor: pointer;
 }
 
 .avatarH {
     color: white !important;
     background-color: red !important;
 }
-.user{
+.userH{
     margin: 12px;
     display: inline-flex;
 }
-.userName{
+.userNameH{
     margin: 12px;
 }
-.playListTitle{
+.playListTitleH{
     display: inline-flex;
     flex-wrap: wrap;
     margin-left: 10px;
 }
-.playListTitleButton{
-    margin-top: 20px !important;
-    margin-left: 10px !important;
-    height: 10px;
+.playListTitleButtonH{
+    margin-left: 16px !important;
+    cursor: pointer;
 }
-.playListContainer{
+.playListContainerH{
     text-align: center;
+}
+.zoomH {
+    transition: transform .2s; /* Animation */
+}
+.zoomH:hover {
+    transform: scale(2); 
+    
 }

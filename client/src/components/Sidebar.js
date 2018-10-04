@@ -1,9 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-// import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import greenp from '../img/green.png';
+import clear from '../img/clearw.svg';
+import save from '../img/savew.svg';
 import {Link} from 'react-router-dom';
 import {deleteFromPlaylist, videoSend, clearPlaylist} from '../actions/index';
 
@@ -42,10 +44,9 @@ class Sidebar extends React.Component {
                                     <div className='playlistItem'>
                                         <div>{item.rudiment}</div>
 
-                                        <Button className='playButton'size='small' onClick={() => this.props.onVideoSend(item)} variant="contained"><Link className='playLink' to='/PVideoPlay'>Play</Link></Button>
+                                        <Link className='playLink' to='/PVideoPlay'><img color='secondary'src={greenp} className='playButton'size='small' onClick={() => this.props.onVideoSend(item)} variant="contained"></img></Link>
 
-                                        {/* <DeleteForeverIcon className='playButton' /> */}
-                                        <Button className='deleteButton'  variant="contained" color="secondary" onClick={() => this.props.onDeleteFromPlaylist(item)}>X</Button>
+                                        <DeleteForeverIcon className='deleteButton' color="secondary" onClick={() => this.props.onDeleteFromPlaylist(item)} />
                                     </div>
                                 </div>
                         
@@ -67,8 +68,8 @@ class Sidebar extends React.Component {
                 
                     <div className='playListTitle'>
                         <h2>Playlist</h2>
-                        <Button className='playListTitleButton' size='small' variant="contained" onClick={this.handleSavePlaylist.bind(this)}>Save</Button>
-                        <Button className='playListTitleButton' size='small' variant="contained"  onClick={() => this.props.onClearPlaylist()}>Clear</Button>
+                        <img src={save} className='playListTitleButton zoom'  onClick={this.handleSavePlaylist.bind(this)}></img>
+                        <img src={clear} className='playListTitleButton zoom'   onClick={() => this.props.onClearPlaylist()}></img>
                         
                     </div>
                         <Grid className='playListContainer'item xs={9}>
