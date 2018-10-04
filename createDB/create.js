@@ -123,25 +123,127 @@ db = require('../models')
 
 // update
 
-// db.drum.update(
-//     {
-//         hyperlink: 'https://www.youtube.com/embed/uI3s24THbFI'
-//     },
-//     {where: {id: 18}}
-// )
-// db.drum.update(
-//     {
-//     reference: 'accenttap.png'
-//     },
-//     {where: {id: 2}}
-// )
-// db.drum.update(
-//     {
-//     reference: 'double'
-//     },
-//     {where: {id: 3}}
-// )
+db.drum.update(
+    {
+        reference: 'single'
+    },
+    {where: {id: 1}}
+)
+db.drum.update(
+    {
+    reference: 'accenttap'
+    },
+    {where: {id: 2}}
+)
+db.drum.update(
+    {
+    reference: 'double'
+    },
+    {where: {id: 3}}
+)
+db.drum.update(
+    {
+    reference: 'para'
+    },
+    {where: {id: 4}}
+)
+db.drum.update(
+    {
+    reference: 'doublep'
+    },
+    {where: {id: 5}}
+)
+db.drum.update(
+    {
+    reference: 'tpara'
+    },
+    {where: {id: 6}}
+)
+db.drum.update(
+    {
+    reference: 'triple'
+    },
+    {where: {id: 7}}
+)
+db.drum.update(
+    {
+    reference: 'drag'
+    },
+    {where: {id: 8}}
+)
+db.drum.update(
+    {
+    reference: 'flam'
+    },
+    {where: {id: 9}}
+)
+db.drum.update(
+    {
+    reference: 'flamtap'
+    },
+    {where: {id: 10}}
+)
+db.drum.update(
+    {
+    reference: 'flamaccent'
+    },
+    {where: {id: 11}}
+)
+db.drum.update(
+    {
+    reference: 'invert'
+    },
+    {where: {id: 12}}
+)
+db.drum.update(
+    {
+    reference: 'cheese'
+    },
+    {where: {id: 13}}
+)
+db.drum.update(
+    {
+    reference: 'flamdrag'
+    },
+    {where: {id: 14}}
+)
+db.drum.update(
+    {
+    reference: 'flam5'
+    },
+    {where: {id: 15}}
+)
+db.drum.update(
+    {
+    reference: 'bookreport'
+    },
+    {where: {id: 16}}
+)
+db.drum.update(
+    {
+    reference: 'bookmark'
+    },
+    {where: {id: 17}}
+)
+db.drum.update(
+    {
+    reference: 'swiss'
+    },
+    {where: {id: 18}}
+)
+db.drum.update(
+    {
+    reference: 'cheesepatty'
+    },
+    {where: {id: 19}}
+)
 
+db.drum.create(
+    {rudiment: 'Patafla-fla',
+    hyperlink: 'https://www.youtube.com/embed/m6n_LDI6IVs',
+    reference: 'patty'
+    }
+)
 
 //destroy
 // db.playlist.destroy({

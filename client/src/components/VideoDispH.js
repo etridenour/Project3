@@ -26,9 +26,9 @@ import swiss from '../img/swiss.png';
 import tpara from '../img/tpara.png';
 import triple from '../img/triple.png';
 
-import '../styles/VideoDisp.css';
+import '../styles/VideoDispH.css';
 
-class VideoDisp extends React.Component {
+class VideoDispH extends React.Component {
     constructor(props) {
         super(props);
         
@@ -40,8 +40,8 @@ class VideoDisp extends React.Component {
         
         return (
 
-            <Grid item xs={10} className='mainBox'>
-            <Grid item xs={12} className='rudimentContent'>
+            <Grid item xs={10} className='mainBoxH'>
+            <Grid item xs={12} className='rudimentContentH'>
                         
             {
             this.props.videoList.map(item => {
@@ -114,9 +114,9 @@ class VideoDisp extends React.Component {
                         image = triple
                         break; 
                 }
-                return <div key={uuid.v4()} className='rudimentBox zoom' onClick={() => this.props.onAddToPlaylist(item)}>
-                            <div className='rudimentName'>{item.rudiment}</div>
-                            <img className='rudimentPic' src={image} />
+                return <div key={uuid.v4()} className='rudimentBoxH zoomH' onClick={() => this.props.onAddToPlaylist(item)}>
+                            <div className='rudimentNameH'>{item.rudiment}</div>
+                            <img className='rudimentPicH' src={image} />
                         </div>
                 })
             }
@@ -152,5 +152,5 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(VideoDisp));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(VideoDispH));
 

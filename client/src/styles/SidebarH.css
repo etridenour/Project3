@@ -1,8 +1,8 @@
 
-.sideBar{
+.sideBarH{
     height: 100%;
     height: 90vh;
-    background: linear-gradient(to right, #a0a0a0, #2196F3);
+    background: linear-gradient(to right, #000000, #800707);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -31,9 +31,9 @@
     height: 1px;
 }
 
-.avatar {
+.avatarH {
     color: white !important;
-    background-color: purple !important;
+    background-color: red !important;
 }
 .user{
     margin: 12px;

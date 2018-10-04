@@ -24,3 +24,8 @@ export const clearPlaylist = items => ({
     type: 'CLEAR_PLAYLIST',
     items: items
 })
+
+export const changeTheme = thing => ({
+    type: 'CHANGE_THEME',
+    thing: thing
+})

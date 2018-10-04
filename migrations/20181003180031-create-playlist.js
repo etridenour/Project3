@@ -17,6 +17,9 @@ module.exports = {
       hyperlink: {
         type: Sequelize.STRING
       },
+      reference: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

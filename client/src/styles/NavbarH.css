@@ -1,15 +1,15 @@
 @font-face {
-    font-family: angel;
-    src: url("../img/angel.otf") format("opentype");
+    font-family: murder;
+    src: url("../img/murder.otf") format("opentype");
 }
 
 .root{
     margin-bottom: .5%;
 }
-.MuiAppBar-colorPrimary-8{
-    background: linear-gradient(90deg, #2196F3 40%, #21CBF3 50%) !important;
-}
 
+.navH{
+    background: linear-gradient(to right, rgb(0, 0, 0),rgb(219, 23, 23), red) !important;
+}
 .MuiToolbar-root-37{
     justify-content: center;
 }
@@ -21,21 +21,20 @@
 
 }
 
-.shred{
+.shredH{
     cursor: pointer;
     text-decoration: none;
     color: white;
-    font-family: angel;
+    font-family: murder;
+    font-size: 50px !important;
 }
 .noUnderline{
     text-decoration: none;
     color: black;
+}
+.rudButton{
     margin-right: 5% !important;
 }
-
 .exButton{
     margin-left: 5% !important;
-}
-.switch{
-    margin-right: 20% !important;
 }

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
+import NavbarH from './NavbarH';
 import Sidebar from './Sidebar';
+import SidebarH from './SidebarH';
 import VideoDisp from './VideoDisp';
+import VideoDispH from './VideoDispH';
 import PVideoPlay from './PVideoPlay';
+import PVideoPlayH from './PVideoPlayH';
 import Landing from './Landing';
+import LandingH from './LandingH';
 import Grid from '@material-ui/core/Grid';
 import {connect} from 'react-redux';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import {addToPlaylist, deleteFromPlaylist, dbFetch} from '../actions';
 
@@ -27,30 +32,61 @@ class Main extends Component {
       }})
     .then(response => response.json())
     .then(response => {
-
-
-      this.props.onFetch(response)
-      return response;
+        this.props.onFetch(response)
+        return response;
     })
+    .then(response => console.log(response))
   }
 
 
 
   render() {
+    var navbar;
+    var sidebar;
+    var landing;
+    var videoDisp;
+    var pvideoPlay;
+    switch(this.props.theme){
+      case 'heaven':
+        navbar = <Navbar />
+        sidebar = <Sidebar />
+        landing = Landing
+        videoDisp = VideoDisp
+        pvideoPlay = PVideoPlay
+        break;
+
+      case 'hell':
+        navbar = <NavbarH />
+        sidebar = <SidebarH />
+        landing = LandingH
+        videoDisp = VideoDispH
+        pvideoPlay = PVideoPlayH
+        break;
+
+      default:
+        navbar = <Navbar />
+        sidebar = <Sidebar />
+        landing = Landing
+        videoDisp = VideoDisp
+        pvideoPlay = PVideoPlay
+        break;
+    }
+
     return (
       <BrowserRouter>
       <div className="App">
+      {console.log(sidebar)}
      
-        <Navbar />
+        {navbar}
 
         <Grid container spacing={0} className='mainGrid'>
                     
-          <Sidebar />
+        {sidebar}
 
-          <Route exact path="/" component={Landing}/>
-          <Route exact path="/AddVideo" component={VideoDisp}/>
-          <Route exact path='/pvideoPlay' component={PVideoPlay}/>
-
+            <Route exact path="/" component={landing}/>
+            <Route exact path="/AddVideo" component={videoDisp}/>
+            <Route exact path='/pvideoPlay' component={pvideoPlay}/>
+       
         </Grid>
         
         
@@ -63,7 +99,8 @@ class Main extends Component {
 function mapStateToProps(state){
   return{
       playList: state.playList,
-      videoList: state.videoList
+      videoList: state.videoList,
+      theme: state.theme
   }
 }
 

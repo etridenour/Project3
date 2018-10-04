@@ -10,9 +10,9 @@ import {deleteFromPlaylist, videoSend, clearPlaylist} from '../actions/index';
 import uuid from 'uuid';
 
 
-import '../styles/Sidebar.css';
+import '../styles/SidebarH.css';
 
-class Sidebar extends React.Component {
+class SidebarH extends React.Component {
     constructor(props) {
         super(props);
         
@@ -57,10 +57,10 @@ class Sidebar extends React.Component {
             
         
                 
-                    <Grid item xs={2} className='sideBar'>
+                    <Grid item xs={2} className='sideBarH'>
 
                     <div className='user'>
-                        <Avatar className='avatar'>ER</Avatar>
+                        <Avatar className='avatarH'>ER</Avatar>
                         <div className='userName'>Eric Ridenour</div>
                     </div>
                     <hr></hr>
@@ -103,4 +103,4 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarH);

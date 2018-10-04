@@ -1,14 +1,14 @@
-.mainBox{
+.mainBoxH{
     background-color: #e7e5e4;
     overflow: 'auto';
     max-height: 100%;
-    background-image: url("../img/heaven.jpg");
+    background-image: url("../img/bg2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover; 
 }
-.rudimentContent{
+.rudimentContentH{
     /* border: solid blue; */
     color: black;
     height: 90vh;
@@ -18,33 +18,35 @@
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.rudimentBox{
+.rudimentBoxH{
     background-color: #e7e5e4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1%;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(34, 33, 33);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     width: 270px;
     height: 100px;
     cursor: pointer;
+    color: white;
    
 }
 
-.rudimentBox:hover{
-    background:linear-gradient(-90deg, #2196F3, rgb(27, 189, 167) );
+.rudimentBoxH:hover{
+    background:linear-gradient(90deg, black, red );
     box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
 }
-.zoom {
+.zoomH {
     transition: transform .2s; /* Animation */
 }
-.zoom:hover {
+.zoomH:hover {
     transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-.rudimentPic{
+.rudimentPicH{
     width: 260px;
     height: 90px;
     border-radius: 10px;

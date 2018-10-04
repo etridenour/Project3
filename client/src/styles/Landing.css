@@ -1,0 +1,36 @@
+@font-face {
+    font-family: angel;
+    src: url("../img/angel.otf") format("opentype");
+}
+
+.Landing{
+    background-color: #e7e5e4;
+    overflow: 'auto';
+    max-height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/heaven.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.Landing1{
+    overflow: 'auto';
+    max-height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.shredTitle{
+    text-align: center;
+    font-size: 60px;
+    font-family: angel;
+}
+.sticks{
+    width:50%;
+}

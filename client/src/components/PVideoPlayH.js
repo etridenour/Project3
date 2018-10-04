@@ -1,9 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import uuid from 'uuid';
-import {addToPlaylist, dbFetch} from '../actions';
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router-dom';
+import {videoSend} from '../actions';
 import accenttap from '../img/accenttap.png';
 import bookmark from '../img/bookmark.png';
 import bookreport from '../img/bookreport.png';
@@ -26,27 +24,17 @@ import swiss from '../img/swiss.png';
 import tpara from '../img/tpara.png';
 import triple from '../img/triple.png';
 
-import '../styles/VideoDisp.css';
+import '../styles/PVideoPlayH.css';
 
-class VideoDisp extends React.Component {
+class PVideoPlayH extends React.Component {
     constructor(props) {
         super(props);
         
     }
-    
 
     render() {
-
-        
-        return (
-
-            <Grid item xs={10} className='mainBox'>
-            <Grid item xs={12} className='rudimentContent'>
-                        
-            {
-            this.props.videoList.map(item => {
-                var image = ''
-                switch(item.reference){
+        var image = ''
+                switch(this.props.videoToPlay.reference){
                     case 'flamdrag':
                         image = flamdrag
                         break;
@@ -114,20 +102,21 @@ class VideoDisp extends React.Component {
                         image = triple
                         break; 
                 }
-                return <div key={uuid.v4()} className='rudimentBox zoom' onClick={() => this.props.onAddToPlaylist(item)}>
-                            <div className='rudimentName'>{item.rudiment}</div>
-                            <img className='rudimentPic' src={image} />
-                        </div>
-                })
-            }
+        
+        console.log(this.props.videoToPlay.reference)
+        return (
+            <Grid item xs={10}  id='videoH'>
+                <div className='PVideoPlayH'>
 
+                    <h1 className='rudimentTitleH'>{this.props.videoToPlay.rudiment}</h1>
+                            
+                    <iframe className='videoH' width="640" height="360"src={this.props.videoToPlay.hyperlink}></iframe>
 
+                    <img className='rudimentUnderVideoH'src={image} />
+
+                </div>
 
             </Grid>
-          
-            </Grid> 
-            
-         
         );
     }
 }
@@ -135,22 +124,18 @@ class VideoDisp extends React.Component {
 
 
 
-
-
 function mapStateToProps(state){
     return{
-        videoList: state.videoList,
-        playList: state.playList
+        videoToPlay: state.videoToPlay
     }
 }
 
 function mapDispatchToProps(dispatch){
 
     return{
-        onAddToPlaylist: (item) => dispatch(addToPlaylist(item)),
-        onFetch: (response) => dispatch(dbFetch(response))
+        onVideoSend: (video) => dispatch(videoSend(video))
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(VideoDisp));
-
+export default connect(mapStateToProps, mapDispatchToProps)(PVideoPlayH);
+  

@@ -3,7 +3,9 @@ import uuid from 'uuid';
 const initial_state = {
     playList: [],
     videoList: [],
-    videoToPlay: {}
+    videoToPlay: {},
+    theme: 'heaven',
+    toggle: 'left'
 }
 
 export function drumReducer (state = initial_state, action) {
@@ -17,7 +19,8 @@ export function drumReducer (state = initial_state, action) {
                 playList: state.playList.concat({
                     rudiment: action.playListItem.rudiment,
                     uuid: uuid.v4(),
-                    hyperlink: action.playListItem.hyperlink
+                    hyperlink: action.playListItem.hyperlink,
+                    reference: action.playListItem.reference
                 }),
                 videoList: state.videoList
             }
@@ -45,7 +48,8 @@ export function drumReducer (state = initial_state, action) {
                     ...state,
                     videoToPlay: {
                         rudiment: action.video.rudiment,
-                        hyperlink: action.video.hyperlink
+                        hyperlink: action.video.hyperlink,
+                        reference: action.video.reference
 
                     }
                 }
@@ -54,6 +58,28 @@ export function drumReducer (state = initial_state, action) {
                 return{
                     ...state,
                     playList: []
+                }
+
+        case 'CHANGE_THEME':
+                let tempToggle;
+                
+                switch(state.theme){
+                    case 'heaven':
+                        console.log("hell")
+                        tempToggle = "hell"
+                        break;
+                    case 'hell':
+                    console.log("heaven")
+                        tempToggle = "heaven"
+                        break;
+                    default:
+                    console.log("default")
+                        tempToggle = "heaven"
+                        break;
+                }
+                return{
+                    ...state,
+                    theme: tempToggle
                 }
 
         default:

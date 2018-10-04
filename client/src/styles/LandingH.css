@@ -1,0 +1,41 @@
+.LandingH{
+    /* background-color: #e7e5e4; */
+    background-image: url("../img/bg2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    max-height: 100%;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+@font-face {
+    font-family: murder;
+    src: url("../img/murder.otf") format("opentype");
+}
+.Landing1H{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.shredTitleH{
+    font-family: murder;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    margin-top: -1px
+}
+.sticksH{
+    width: 34%;
+    margin-top: -100px;
+}
+.whiteText{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

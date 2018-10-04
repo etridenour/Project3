@@ -10,34 +10,35 @@ import {changeTheme} from '../actions';
 import {connect} from 'react-redux';
 
 
-import '../styles/Navbar.css';
+import '../styles/NavbarH.css';
 
 
-class Navbar extends React.Component {
+class NavbarH extends React.Component {
     constructor(props) {
         super(props);
         
     }
+  
 
     render() {
         return (
             <div className='root'>
                 <AppBar position="static" className='appBar'>
-                    <Toolbar className='nav'>
+                    <Toolbar className='navH'>
                     <FormControlLabel
                         control={
                             <Switch
-                            className='switch'
                             onChange={() => this.props.onThemeChange()}
-                            color="primary"
+                            color="white"
                             value="dynamic-class-name"
+                            checked={true}
                             />
                         }
                         />
             
-                    <Link className='noUnderline' to="/AddVideo"><Button className='rudButton'>Rudiments</Button></Link>
+                    <Button className='rudButton'><Link className='noUnderline' to="/AddVideo">Rudiments</Link></Button>
                     
-                    <Typography variant="title" color="inherit"><Link className='shred' to="/">Chop Builder</Link></Typography>
+                    <Typography variant="title" color="inherit"><Link className='shredH' to="/">Chop Shredder</Link></Typography>
                     <Button className='exButton'>Exercises</Button>
                     
                     </Toolbar>
@@ -61,5 +62,5 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarH);
 
