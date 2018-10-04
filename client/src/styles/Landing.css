@@ -32,5 +32,34 @@
     font-family: angel;
 }
 .sticks{
-    width:50%;
+    width:600px;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 754px) {
+    .shredTitle{
+        font-size: 60px;
+    }
+    .sticks{
+        width:500px;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    .shredTitle{
+        font-size: 60px;
+    }
+    .sticks{
+        width:300px;
+    }
+}
+@media only screen and (max-width: 545px) {
+    .shredTitle{
+        font-size: 40px;
+    }
+    .sticks{
+        width:200px;
+    }
 }

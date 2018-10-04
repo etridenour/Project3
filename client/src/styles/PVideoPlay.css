@@ -1,3 +1,7 @@
+@font-face {
+    font-family: angel;
+    src: url("../img/angel.otf") format("opentype");
+}
 .PVideoPlay{
     border: solid blue;
     background-color: rgb(240, 240, 240);
@@ -7,7 +11,7 @@
     align-items: center;
     border: none;
     flex-direction: column;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: angel;
     background-image: url("../img/heaven.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -20,13 +24,42 @@
     background-color: rgb(201, 201, 201);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 1%;
+   
 }
 .video{
     border-radius: 10px;
     background-color: rgb(201, 201, 201);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 1%;
+    width: 640px;
+    height: 360px;
 }
 .rudimentTitle{
     margin-top: 3%;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 965px) {
+    .video{
+        width: 426px;
+        height: 240px;
+    }
+    .rudimentUnderVideo{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .video{
+        width: 281px;
+        height: 158px;
+    }
+}
+@media only screen and (max-width: 545px) {
+    .video{
+        width: 141px;
+        height: 79px;
+    }
 }

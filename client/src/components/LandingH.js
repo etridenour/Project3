@@ -12,7 +12,7 @@ class LandingH extends React.Component {
 
     render() {
         return (
-            <Grid item xs={10} className='LandingH'>
+            <Grid item md={10} sm={9} xs={7} className='LandingH'>
                 <Grid className='Landing1H'item xs={10}>
                             
                     <h1 className='shredTitleH'>Chop Shredder</h1>

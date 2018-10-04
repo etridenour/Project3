@@ -12,13 +12,13 @@ class Landing extends React.Component {
 
     render() {
         return (
-            <Grid item xs={10} className='Landing'>
+            <Grid item md={10} sm={9} xs={7} className='Landing'>
                 <Grid className='Landing1'item xs={10}>
                             
                     <h1 className='shredTitle'>Chop Builder</h1>
 
                     <img className='sticks'src={good}/>
-                    <br></br>
+                   
                     
 
                     <h2>Rudimental drumming chop builder</h2>

@@ -39,3 +39,9 @@
 .switch{
     margin-right: 20% !important;
 }
+
+@media only screen and (max-width: 933px) {
+    .shred{
+        font-size: 15px;
+    }
+}

@@ -105,12 +105,12 @@ class PVideoPlay extends React.Component {
         
         console.log(this.props.videoToPlay.reference)
         return (
-            <Grid item xs={10}  id='video'>
+            <Grid item md={10} sm={9} xs={7}  id='video'>
                 <div className='PVideoPlay'>
 
                     <h1 className='rudimentTitle'>{this.props.videoToPlay.rudiment}</h1>
                             
-                    <iframe className='video' width="640" height="360"src={this.props.videoToPlay.hyperlink}></iframe>
+                    <iframe className='video embed-responsive-item' src={this.props.videoToPlay.hyperlink}></iframe>
 
                     <img className='rudimentUnderVideo'src={image} />
 

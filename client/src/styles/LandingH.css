@@ -32,10 +32,40 @@
     margin-top: -1px
 }
 .sticksH{
-    width: 34%;
+    width: 400px;
     margin-top: -100px;
 }
 .whiteText{
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 754px) {
+    .shredTitleH{
+        font-size: 80px;
+    }
+    .sticksH{
+        width:350px;
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    .shredTitleH{
+        font-size: 70px;
+    }
+    .sticksH{
+        width:300px;
+    }
+}
+@media only screen and (max-width: 545px) {
+    .shredTitleH{
+        font-size: 40px;
+    }
+    .sticksH{
+        width:200px;
+    }
 }

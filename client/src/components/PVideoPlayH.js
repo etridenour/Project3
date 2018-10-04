@@ -105,7 +105,7 @@ class PVideoPlayH extends React.Component {
         
         console.log(this.props.videoToPlay.reference)
         return (
-            <Grid item xs={10}  id='videoH'>
+            <Grid item md={10} sm={9} xs={7}   id='videoH'>
                 <div className='PVideoPlayH'>
 
                     <h1 className='rudimentTitleH'>{this.props.videoToPlay.rudiment}</h1>

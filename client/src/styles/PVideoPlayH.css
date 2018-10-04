@@ -1,3 +1,7 @@
+@font-face {
+    font-family: murder;
+    src: url("../img/murder.otf") format("opentype");
+}
 .PVideoPlayH{
     border: solid blue;
     background-color: rgb(240, 240, 240);
@@ -7,7 +11,8 @@
     align-items: center;
     border: none;
     flex-direction: column;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: murder;
+    font-size: 30px;
     background-image: url("../img/bg2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -32,4 +37,30 @@
 .rudimentTitleH{
     margin-top: 3%;
     color: white;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 965px) {
+    .videoH{
+        width: 426px;
+        height: 240px;
+    }
+    .rudimentUnderVideoH{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .videoH{
+        width: 281px;
+        height: 158px;
+    }
+}
+@media only screen and (max-width: 545px) {
+    .videoH{
+        width: 141px;
+        height: 79px;
+    }
 }

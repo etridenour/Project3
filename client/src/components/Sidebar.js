@@ -57,7 +57,7 @@ class Sidebar extends React.Component {
             
         
                 
-                    <Grid item xs={2} className='sideBar'>
+                    <Grid item  xs={5} sm={3} md={2} l={2} className='sideBar'>
 
                     <div className='user'>
                         <Avatar className='avatar'>ER</Avatar>
