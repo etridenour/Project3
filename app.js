@@ -14,12 +14,18 @@ var playListTable = db.playlist.findAll()
         return results
     })
 
+var exerciseTable = db.drum.findAll()
+    .then((results) => {
+        return results
+    })
+
 
 app.get('/dbDrum', function(req, res) {
 
     res.json({
         data: drumTable,
-        playList: playListTable
+        playList: playListTable,
+        exercises: exerciseTable
     })
 
 })

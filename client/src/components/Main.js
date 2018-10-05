@@ -11,7 +11,7 @@ import Landing from './Landing';
 import LandingH from './LandingH';
 import Grid from '@material-ui/core/Grid';
 import {connect} from 'react-redux';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import {addToPlaylist, deleteFromPlaylist, dbFetch} from '../actions';
 
@@ -31,9 +31,7 @@ class Main extends Component {
         'Accept': 'application/json'
       }})
     .then(response => response.json())
-    .then(response => {
-        this.props.onFetch(response)
-        return response;
+    .then(response => {this.props.onFetch(response)
     })
     .then(response => console.log(response))
   }
