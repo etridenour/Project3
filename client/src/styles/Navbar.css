@@ -14,13 +14,27 @@
     justify-content: center;
 }
 
-.parent {
+.smallParent {
     display: flex;
+    justify-content: center;
+    width: 80%;
     align-items: center;
-    width:30%
-
 }
-
+.largeParent{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.switch{
+    position: absolute;
+    right: 0;
+    margin-right: -20px;
+}
+.inSwitch{
+    color: red !important;
+}
 .shred{
     cursor: pointer;
     text-decoration: none;
@@ -36,12 +50,19 @@
 .exButton{
     margin-left: 5% !important;
 }
-.switch{
-    margin-right: 20% !important;
+.mode{
+    margin-top: -8px !important;
+    margin-left: -12px !important;
 }
 
 @media only screen and (max-width: 933px) {
     .shred{
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 616px) {
+    .largeParent{
+        justify-content: start;
     }
 }

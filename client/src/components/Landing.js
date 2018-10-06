@@ -22,7 +22,7 @@ class Landing extends React.Component {
                     
 
                     <h2>Rudimental drumming chop builder</h2>
-                    <h3>Add items to the playlist and start chopping out!</h3>
+                    <h3>Add rudiments and/or exercises to the playlist and start chopping out!</h3>
                 </Grid>
             </Grid>
         );

@@ -21,7 +21,7 @@ class LandingH extends React.Component {
                    
 
                     <h2 className='whiteText'>Rudimental drumming chop builder</h2>
-                    <h3 className='whiteText'>Add items to the playlist and get shredding!</h3>
+                    <h3 className='whiteText'>Add rudiments and/or exercises to the playlist and get shredding!</h3>
                 </Grid>
             </Grid>
         );

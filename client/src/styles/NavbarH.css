@@ -14,11 +14,23 @@
     justify-content: center;
 }
 
-.parent {
+.smallParentH {
     display: flex;
+    justify-content: center;
+    width: 80%;
     align-items: center;
-    width:30%
-
+}
+.largeParentH{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.switchH{
+    position: absolute;
+    right: 0;
+    margin-right: -20px;
 }
 
 .shredH{
@@ -28,13 +40,26 @@
     font-family: murder;
     font-size: 50px !important;
 }
-.noUnderline{
+.noUnderlineH{
     text-decoration: none;
     color: black;
+    margin-right: 5% !important;
 }
 .rudButton{
     margin-right: 5% !important;
 }
-.exButton{
+.exButtonH{
     margin-left: 5% !important;
+}
+
+@media only screen and (max-width: 933px) {
+    .shredH{
+        font-size: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 616px) {
+    .largeParentH{
+        justify-content: start;
+    }
 }
