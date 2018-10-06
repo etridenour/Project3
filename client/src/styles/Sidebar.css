@@ -11,7 +11,7 @@
     font-size: 17px;
     margin-top: 3%;
     margin-left: 10px;
-    color: white;
+    color: black;
     background-color: rgb(202, 202, 202);
     border: solid black;
     border-radius: 10px;
@@ -48,6 +48,7 @@
     display: inline-flex;
     flex-wrap: wrap;
     margin-left: 10px;
+    color: black
 }
 .playListTitleButton{
     margin-left: 16px !important;

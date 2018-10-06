@@ -41,7 +41,7 @@ class SidebarH extends React.Component {
 
                     playListDisplay = this.props.playList.map(item => {
                         return  <div key={uuid.v4()}>
-                                    <div className='playlistItem'>
+                                    <div className='playlistItemH'>
                                         <div>{item.rudiment}</div>
 
                                         <Link className='playLinkH' to='/PVideoPlay'><img color='secondary'src={green} className='playButtonH'size='small' onClick={() => this.props.onVideoSend(item)} variant="contained"></img></Link>
@@ -66,7 +66,7 @@ class SidebarH extends React.Component {
                     </div>
                     <hr></hr>
                 
-                    <div className='playListTitle'>
+                    <div className='playListTitleH'>
                         <h2>Playlist</h2>
                         <img src={sw} className='playListTitleButtonH zoomH'  onClick={this.handleSavePlaylist.bind(this)}></img>
                         <img src={cw} className='playListTitleButtonH zoomH'   onClick={() => this.props.onClearPlaylist()}></img>
