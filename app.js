@@ -47,5 +47,7 @@ app.post('/update', function(req,res){
     })
 })
 
-
-app.listen(3001);
+var port = process.env.PORT || 3001;
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
