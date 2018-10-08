@@ -25,7 +25,7 @@ class Main extends Component {
   // }
 
   componentWillMount() {
-    fetch('/dbDrum', {
+    fetch('https://chopbuilder.herokuapp.com/dbDrum', {
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'

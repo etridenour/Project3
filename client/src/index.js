@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import drumReducer from './reducers/drumReducer';
 import Main from './components/Main';
-
 import registerServiceWorker from './registerServiceWorker';
 
 var store = createStore(drumReducer,
