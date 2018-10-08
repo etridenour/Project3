@@ -22,7 +22,7 @@ class SidebarH extends React.Component {
 
     handleSavePlaylist(){
         alert('Play List Saved')
-        fetch('/https://chopbuilder.herokuapp.com/update', {
+        fetch('https://chopbuilder.herokuapp.com/update', {
             method: 'POST', 
             body: JSON.stringify({
                 data: this.props.playList
