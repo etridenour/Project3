@@ -30,12 +30,18 @@ app.all('*', function (req, res, next) {
 
 app.get('/dbDrum', function(req, res) {
 
-    db.playlist.findAll()
+    var drumResults = null
+    db.drum.findAll()
     .then((results) => {
-        res.json({
-            data: drumTable,
-            playList: results,
-            exercises: exerciseTable
+        drumResults = results
+
+        db.playlist.findAll()
+        .then((results) => {
+            res.json({
+                data: drumResults,
+                playList: results,
+                // exercises: exerciseTable
+            })
         })
     })
 
