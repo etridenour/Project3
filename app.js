@@ -40,7 +40,7 @@ app.get('/dbDrum', function(req, res) {
             res.json({
                 data: drumResults,
                 playList: results,
-                // exercises: exerciseTable
+                exercises: exerciseTable
             })
         })
     })
