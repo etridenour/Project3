@@ -14,7 +14,7 @@ var playListTable = db.playlist.findAll()
         return results
     })
 
-var exerciseTable = db.exerciseTable.findAll()
+var exerciseTable = db.exercises.findAll()
     .then((results) => {
         return results
     })
