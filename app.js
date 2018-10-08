@@ -50,6 +50,7 @@ app.post('/update', function(req,res){
     .then(() => {
         const playList = req.body.data;
         db.playlist.bulkCreate(playList);
+        res.end()
     })
 })
 
