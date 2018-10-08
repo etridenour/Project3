@@ -37,10 +37,11 @@ export function drumReducer (state = initial_state, action) {
             }
 
         case 'DB_FETCH':
+            
             return{
                 ...state,
-                videoList: action.dbList.data.fulfillmentValue,
-                playList: action.dbList.playList.fulfillmentValue
+                videoList: action.dbList.data,
+                playList: action.dbList.playList
                 }
 
         case 'VIDEO_SEND':

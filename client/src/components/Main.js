@@ -31,7 +31,9 @@ class Main extends Component {
         'Accept': 'application/json'
       }})
     .then(response => response.json())
-    .then(response => {this.props.onFetch(response)
+    .then(response => {
+      console.log(response)
+      this.props.onFetch(response)
     })
     .then(response => console.log(response))
   }

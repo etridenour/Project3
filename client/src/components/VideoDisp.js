@@ -43,7 +43,7 @@ class VideoDisp extends React.Component {
             <Grid item md={10} sm={9} xs={7}  className='mainBox'>
             <Grid item xs={12} className='rudimentContent'>
                         
-            {
+            { this.props.videoList ? 
             this.props.videoList.map(item => {
                 var image = ''
                 switch(item.reference){
@@ -119,7 +119,7 @@ class VideoDisp extends React.Component {
                             <img className='rudimentPic' src={image} />
                         </div>
                 })
-            }
+            : null}
 
 
 
