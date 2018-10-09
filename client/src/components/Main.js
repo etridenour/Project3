@@ -5,6 +5,8 @@ import Sidebar from './Sidebar';
 import SidebarH from './SidebarH';
 import VideoDisp from './VideoDisp';
 import VideoDispH from './VideoDispH';
+import ExerciseDisp from './ExerciseDisp';
+import ExerciseDispH from './ExerciseDispH';
 import PVideoPlay from './PVideoPlay';
 import PVideoPlayH from './PVideoPlayH';
 import Landing from './Landing';
@@ -46,6 +48,7 @@ class Main extends Component {
     var landing;
     var videoDisp;
     var pvideoPlay;
+    var exerciseDisp;
     switch(this.props.theme){
       case 'heaven':
         navbar = <Navbar />
@@ -53,6 +56,7 @@ class Main extends Component {
         landing = Landing
         videoDisp = VideoDisp
         pvideoPlay = PVideoPlay
+        exerciseDisp = ExerciseDisp
         break;
 
       case 'hell':
@@ -61,6 +65,7 @@ class Main extends Component {
         landing = LandingH
         videoDisp = VideoDispH
         pvideoPlay = PVideoPlayH
+        exerciseDisp = ExerciseDispH
         break;
 
       default:
@@ -69,6 +74,7 @@ class Main extends Component {
         landing = Landing
         videoDisp = VideoDisp
         pvideoPlay = PVideoPlay
+        exerciseDisp = ExerciseDisp
         break;
     }
 
@@ -86,6 +92,7 @@ class Main extends Component {
             <Route exact path="/" component={landing}/>
             <Route exact path="/AddVideo" component={videoDisp}/>
             <Route exact path='/pvideoPlay' component={pvideoPlay}/>
+            <Route exact path='/AddExercise' component={exerciseDisp}/>
        
         </Grid>
         

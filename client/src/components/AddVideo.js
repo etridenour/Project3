@@ -15,7 +15,7 @@ class AddVideo extends React.Component {
     render() {
         return (
             <div>
-                 <Grid>
+                <Grid>
                     
                     {
                         this.props.videoList.map(item => {

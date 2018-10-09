@@ -1,0 +1,20 @@
+front end:
+
+in client directory:
+npm run build
+
+in build directory:
+change index.html to 200.html
+surge
+then hit enter, change url to chopbuilder.surge.sh
+
+
+
+
+
+
+back end:
+
+git add .
+git commit -m ''
+git push heroku heroku:master

@@ -2,6 +2,7 @@
 .sideBarH{
     max-height: 100%;
     height: 90vh;
+    overflow: auto;
     background: linear-gradient(to right, #000000, #800707);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

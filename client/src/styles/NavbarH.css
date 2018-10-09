@@ -40,17 +40,18 @@
     font-family: murder;
     font-size: 50px !important;
 }
-.noUnderlineH{
+.rudButtonH{
     text-decoration: none;
-    color: black;
     margin-right: 5% !important;
 }
-.rudButtonH{
-    margin-right: 5% !important;
+.rudButtonTH{
     color: white !important;
 }
 .exButtonH{
+    text-decoration: none;
     margin-left: 5% !important;
+}
+.exButtonTH{
     color: white !important;
 }
 

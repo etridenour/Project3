@@ -46,13 +46,15 @@
     color: white;
     font-family: angel;
 }
-.noUnderline{
+.rudButton{
     text-decoration: none;
     color: black;
     margin-right: 5% !important;
 }
 
 .exButton{
+    text-decoration: none;
+    color: black;
     margin-left: 5% !important;
 }
 .mode{
