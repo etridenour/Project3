@@ -15,7 +15,7 @@ class ExerciseDisp extends React.Component {
             <Grid item md={10} sm={9} xs={7} className='Landing'>
                 <Grid className='Landing1'item xs={10}>
 
-                    <h2>Exercises</h2>
+                    <h2>Exercises Coming Soon</h2>
                 </Grid>
             </Grid>
         );
