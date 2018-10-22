@@ -41,9 +41,9 @@ class NavbarH extends React.Component {
                                 <FormHelperText className='mode'>Build Mode</FormHelperText>
                             </div>
                             <div className='smallParentH'>
-                                <Link className='noUnderlineH' to="/AddVideo"><Button className='rudButtonH'>Rudiments</Button></Link>
-                                <Typography variant="title" color="inherit"><Link className='shredH' to="/">Chop Shredder</Link></Typography>
-                                <Button className='exButtonH noUnderlineH'>Exercises</Button>
+                                <Link className='rudButtonH' to="/AddVideo"><Button className='rudButtonTH'>Rudiments</Button></Link>
+                                <Typography variant="title" color="inherit"><Link className='shredH' to="/">Chop Builder</Link></Typography>
+                                <Link className='exButtonH' to="/AddExercise"><Button className='exButtonTH'>Exercises</Button></Link>
                             </div>
                         </div>
                     

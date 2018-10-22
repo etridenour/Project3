@@ -38,9 +38,9 @@ class Navbar extends React.Component {
                                 <FormHelperText className='mode'>Shred Mode</FormHelperText>
                             </div>
                             <div className='smallParent'>
-                                <Link className='noUnderline' to="/AddVideo"><Button className='rudButton'>Rudiments</Button></Link>
+                                <Link className='rudButton' to="/AddVideo"><Button>Rudiments</Button></Link>
                                 <Typography variant="title" color="inherit"><Link className='shred' to="/">Chop Builder</Link></Typography>
-                                <Button className='exButton'>Exercises</Button>
+                                <Link className='exButton' to="/AddExercise"><Button>Exercises</Button></Link>
                             </div>
                         </div>
                     

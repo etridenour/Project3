@@ -14,20 +14,35 @@ var playListTable = db.playlist.findAll()
         return results
     })
 
-var exerciseTable = db.drum.findAll()
+var exerciseTable = db.exercises.findAll()
     .then((results) => {
         return results
     })
 
-
-app.get('/dbDrum', function(req, res) {
-
-    res.json({
-        data: drumTable,
-        playList: playListTable,
-        exercises: exerciseTable
+    app.all('*', function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*')
+        res.setHeader('Access-Control-Allow-Credentials', 'true')
+        res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE')
+        res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization')
+        next()
     })
 
+    
+app.get('/dbDrum', function(req, res) {
+
+    var drumResults = null
+    db.drum.findAll()
+    .then((results) => {
+        drumResults = results
+        db.playlist.findAll()
+        .then((results) => {
+            res.json({
+                data: drumResults,
+                playList: results,
+                exercises: exerciseTable
+            })
+        })
+    })
 })
 
 app.use(bodyParser.json());
@@ -44,8 +59,12 @@ app.post('/update', function(req,res){
     .then(() => {
         const playList = req.body.data;
         db.playlist.bulkCreate(playList);
+        res.end()
     })
 })
 
 
-app.listen(3001);
+var port = process.env.PORT || 3001;
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});

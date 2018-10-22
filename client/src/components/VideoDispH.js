@@ -41,9 +41,10 @@ class VideoDispH extends React.Component {
         return (
 
             <Grid item md={10} sm={9} xs={7} className='mainBoxH'>
+            <h2 className='pageTitleH'>Click to add to playlist</h2>
             <Grid item xs={12} className='rudimentContentH'>
                         
-            {
+            { this.props.videoList ? 
             this.props.videoList.map(item => {
                 var image = ''
                 switch(item.reference){
@@ -119,6 +120,7 @@ class VideoDispH extends React.Component {
                             <img className='rudimentPicH' src={image} />
                         </div>
                 })
+                : null}
             }
 
 

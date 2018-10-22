@@ -21,7 +21,7 @@ class SidebarH extends React.Component {
     }
 
     handleSavePlaylist(){
-        alert('Play List Saved')
+        alert('Playlist Saved')
         fetch('/update', {
             method: 'POST', 
             body: JSON.stringify({
