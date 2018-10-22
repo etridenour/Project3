@@ -123,7 +123,7 @@ class VideoDisp extends React.Component {
                             <img className='rudimentPic' src={image} />
                         </div>
                 })
-            : null}
+            : <h2 className='pageTitle'>(server may take a second)</h2>}
 
 
 
