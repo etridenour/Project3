@@ -21,7 +21,7 @@ class Sidebar extends React.Component {
     }
 
     handleSavePlaylist(){
-        alert('Play List Saved')
+        alert('Playlist Saved')
         fetch('https://chopbuilder.herokuapp.com/update', {
             method: 'POST', 
             body: JSON.stringify({
