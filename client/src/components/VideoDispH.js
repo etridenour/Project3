@@ -42,7 +42,7 @@ class VideoDispH extends React.Component {
 
             <Grid item md={10} sm={9} xs={7} className='mainBoxH'>
 
-            <h2 className='pageTitleH'>Click to add to </h2>
+            <h2 className='pageTitleH'>Click to add to playlist</h2>
         
             <Grid item xs={12} className='rudimentContentH'>
                         
