@@ -44,7 +44,7 @@ class VideoDispH extends React.Component {
 
             <h2 className='pageTitleH'>Click to add to playlist</h2>
 
-            {this.props.videoList ? null: <h2 className='pageTitleH'>(server may take a second)</h2> }
+            {this.props.videoList ? null : <h2 className='pageTitleH'>(server may take a second)</h2> }
         
             <Grid item xs={12} className='rudimentContentH'>
                         
