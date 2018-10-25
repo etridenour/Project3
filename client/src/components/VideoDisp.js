@@ -37,7 +37,7 @@ class VideoDisp extends React.Component {
 
     render() {
 
-        
+       
         return (
 
             <Grid item md={10} sm={9} xs={7}  className='mainBox'>
