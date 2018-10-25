@@ -37,11 +37,15 @@ class VideoDisp extends React.Component {
 
     render() {
 
-        
+       
         return (
 
             <Grid item md={10} sm={9} xs={7}  className='mainBox'>
+
             <h2 className='pageTitle'>Click to add to playlist</h2>
+
+            {this.props.videoList ? null : <h2 className='pageTitle'>(server may take a second)</h2> }
+
             <Grid item xs={12} className='rudimentContent'>
 
                         
@@ -121,8 +125,7 @@ class VideoDisp extends React.Component {
                             <img className='rudimentPic' src={image} />
                         </div>
                 })
-                : null}
-            }
+            : null}
 
 
 
