@@ -2,7 +2,7 @@ import uuid from 'uuid';
 
 const initial_state = {
     playList: [],
-    videoList: [],
+    videoList: null,
     videoToPlay: {},
     theme: 'heaven',
     toggle: 'left'
