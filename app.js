@@ -3,6 +3,11 @@ var app = express();
 var bodyParser = require('body-parser')
 db = require('./models');
 
+app.use(require("./routes/authentication"));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false}));
+
 
 var drumTable = db.drum.findAll()
     .then((results) => {
@@ -45,8 +50,6 @@ app.get('/dbDrum', function(req, res) {
     })
 })
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
 
 
 

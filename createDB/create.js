@@ -2,11 +2,11 @@ db = require('../models')
 
 //create
 
-db.exercises.create(
-    {rudiment: 'Singles',
-    hyperlink: 'https://www.youtube.com/watch?v=eafRE74JGZ8'
-    }
-)
+// db.exercises.create(
+//     {rudiment: 'Singles',
+//     hyperlink: 'https://www.youtube.com/watch?v=eafRE74JGZ8'
+//     }
+// )
 
 
 

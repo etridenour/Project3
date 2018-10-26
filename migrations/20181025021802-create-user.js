@@ -17,8 +17,8 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      videoId: {
-        type: Sequelize.INTEGER
+      password: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
